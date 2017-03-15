@@ -1,10 +1,9 @@
 package ca.cmpt213.as3shapes;
 
-
 import java.awt.*;
 
 /**
- * Created by Nova on 03/03/2017.
+ * Class Shape Interface for shapes
  */
 public interface Shape {
 

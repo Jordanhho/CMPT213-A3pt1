@@ -47,12 +47,5 @@ public class Rectangle extends ShapeImpl {
         else {
             return false;
         }
-        /*
-        if ((testLocationX > getLocationX() && testLocationX < getLocationX() + getWidth() - 1) && (testLocationY > getLocationY() && testLocationY < getLocationY() + getHeight() - 1)) {
-            return true;
-        } else {
-            return false;
-        }
-        */
     }
 }

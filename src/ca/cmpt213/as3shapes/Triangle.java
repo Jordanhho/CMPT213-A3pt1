@@ -20,6 +20,14 @@ public class Triangle extends ShapeImpl {
     }
 
     /**
+     * Get side of triangle
+     * @return returns size of triangle
+     */
+    public int getSize() {
+        return size;
+    }
+
+    /**
      * isBorder method checks if given X and Y coordinate is a border of the triangle or not and returns the boolean value for it
      * @param testLocationX the test X coordinate location of the canvas if it is a border of the triangle or not
      * @param testLocationY the test Y coordinate location of the canvas if it is a border of the triangle or not
@@ -66,6 +74,7 @@ public class Triangle extends ShapeImpl {
      * @return a boolean value if inside or not
      */
     protected boolean isInside(int testLocationX, int testLocationY) {;
+
         //Offset X - Y of the coordinate to translate
         int offset = getLocationX() - getLocationY();
 
@@ -81,7 +90,7 @@ public class Triangle extends ShapeImpl {
             testOffSetLocationX = testOffSetLocationX - offset;
         }
 
-        if(!isBorder(testOffSetLocationX, testOffSetLocationY) && testOffSetLocationY > testOffSetLocationX) { //Not a border and Y is always greater than X
+        if(!isBorder(testLocationX, testLocationY) && testOffSetLocationY > testOffSetLocationX) { //Not a border and Y is always greater than X
             return true;
         }
         else { //Not a border or inside triangle

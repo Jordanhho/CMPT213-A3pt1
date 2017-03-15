@@ -1,9 +1,7 @@
 package ca.cmpt213.as3shapes;
 
-import ca.cmpt213.as3shapes.*;
 import ca.cmpt213.as3shapes.Canvas;
 
-import javax.swing.*;
 import java.awt.*;
 
 /**
@@ -75,22 +73,17 @@ public abstract class ShapeImpl implements Shape {
      * @param canvas the given canvas to draw onto
      */
     public void draw(Canvas canvas) {
-        //System.out.println("The start coordinates are: " + getLocationX() + "," + getLocationY());
+
         for(int col = locationX; col < locationX + width; col++) { //Col X
             for(int row = locationY; row < locationY + height; row++) { //Row Y
-                //canvas.setPointText(col, row, ' ');
-                if(isBorder(col, row)) {
-                    //System.out.println("Is border coordinates: " + col + "," + row);
+
+                if(isBorder(col, row)) { //draws border
                     canvas.setPointColor(col, row, color);
                     canvas.setPointText(col, row, borderCharacter);
                 }
-                else if(isInside(col, row)) {
+                else if(isInside(col, row)) { //draws inside
                     canvas.setPointText(col, row, ' ');
-                    //System.out.println("Is inside coordinates: " + col + "," + row);
                     canvas.setPointColor(col, row, color);
-                }
-                else {
-                    //System.out.println("Is neither coordinates: " + col + "," + row);
                 }
             }
         }

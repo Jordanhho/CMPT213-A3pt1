@@ -28,6 +28,7 @@ public class CanvasIcon implements Icon {
     /**
      * Create the CanvasIcon from an existing Canvas with characters and
      * coloured blocks in it.
+     * @param canvas an icon from a given canvas
      */
     public CanvasIcon(Canvas canvas) {
         this.canvas = canvas;

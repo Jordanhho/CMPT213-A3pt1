@@ -1,9 +1,5 @@
 package ca.cmpt213.as3shapes;
 
-import ca.cmpt213.as3shapes.Rectangle;
-import ca.cmpt213.as3shapes.TextBox;
-import ca.cmpt213.as3shapes.Triangle;
-
 import java.awt.Color;
 import java.awt.Component;
 
@@ -24,6 +20,7 @@ public class MainGUI {
 
     /**
      * Application to display the test "pictures" to the UI.
+     * @param args arguments
      */
     public static void main(String[] args) {
         JFrame frame = new JFrame();
@@ -34,13 +31,11 @@ public class MainGUI {
         //frame.add(makeCanvasIcon());
 
         // Test routines to exercise Picture and the Shape classes.
-
-
-		frame.add(makeRectanglesPicture());
-		frame.add(makeTrianglesPicture());
-//		frame.add(makeTextBoxesPicture());
-//		frame.add(makeMixedPicture());
-//		frame.add(makeFrontAndBackPicture());
+//		frame.add(makeRectanglesPicture());
+//		frame.add(makeTrianglesPicture());
+		frame.add(makeTextBoxesPicture());
+		frame.add(makeMixedPicture());
+		frame.add(makeFrontAndBackPicture());
 
         frame.pack();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -88,9 +83,6 @@ public class MainGUI {
 
 
 
-
-
-
     // //////////////////////////////////////////////////////////////////////////
     // Rectangle Test
     // //////////////////////////////////////////////////////////////////////////
@@ -102,7 +94,6 @@ public class MainGUI {
     }
 
     private static void testRectanglesRow1(PicturePanel picture) {
-
         Rectangle r1 = new Rectangle(0, 0, 1, 1);
         r1.setColor(Color.MAGENTA);
         picture.addFront(r1);
@@ -122,9 +113,7 @@ public class MainGUI {
         Rectangle r5 = new Rectangle(27, 0, 35, 18);
         r5.setColor(Color.ORANGE);
         picture.addFront(r5);
-
     }
-
 
     private static void testRectangleRow2(PicturePanel picture) {
         final int ROW = 5;
@@ -148,7 +137,6 @@ public class MainGUI {
         picture.addFront(r1);
     }
 
-
     // //////////////////////////////////////////////////////////////////////////
     // Triangle Test
     // //////////////////////////////////////////////////////////////////////////
@@ -168,7 +156,6 @@ public class MainGUI {
         t2.setColor(Color.RED);
         picture.addFront(t2);
 
-
         Triangle t3 = new Triangle(10, 0, 3);
         t3.setColor(Color.MAGENTA);
         picture.addFront(t3);
@@ -184,7 +171,6 @@ public class MainGUI {
         Triangle t6 = new Triangle(37, 2, 7);
         t6.setColor(Color.BLACK);
         picture.addFront(t6);
-
     }
 
     private static void testTriangleRow2(PicturePanel picture) {
@@ -211,7 +197,6 @@ public class MainGUI {
         t1 = new Triangle(30, ROW, 16);
         t1.setBorderChar('@');
         picture.addFront(t1);
-
 
     }
 
@@ -384,6 +369,5 @@ public class MainGUI {
 
         return pic;
     }
-
 
 }

@@ -39,8 +39,6 @@ public class PicturePanel extends JPanel {
         this.add(canvasPanel, BorderLayout.SOUTH);
     }
 
-
-
     /**
      * Class to add in shapes from the front of the list
      * @param shape input shape
